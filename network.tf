@@ -1,6 +1,6 @@
 variable "vpc_name" {
     type = string
-    default = "vpc_clc12_terraform"
+    default = "vpc_clc12_terraform_iac"
 }
 
 resource "aws_vpc" "minha_vpc" {
@@ -87,6 +87,6 @@ resource "aws_nat_gateway" "natgw_1a" {
 }
 
 resource "aws_route_table_association" "private_rt_associate" {
-    subnet_id = aws_subnet.private_subnet.id
+    subnet_id = aws_subnet.private_susSbnet.id
     route_table_id = aws_route_table.private_rt.id
 }
